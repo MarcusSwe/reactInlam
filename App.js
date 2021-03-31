@@ -11,7 +11,7 @@ function App() {
       const resp = await fetch('https://pokeapi.co/api/v2/pokemon?limit=50')
       const pokemon = await resp.json()
       const pokemon50 = pokemon.results.slice(0,49)
-      pokemon50.forEach(function (e) {e.bildUrl = '"#"';});
+      pokemon50.forEach(e => {e.bildUrl = '"#"';});
       setPokemons(pokemon50);      
       console.log(pokemon50)
     }
