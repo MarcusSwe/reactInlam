@@ -18,16 +18,11 @@ useEffect(() => {
     pokemon500.push(pokemon.abilities)
     pokemon500.push(pokemon.sprites)
     pokemon500.push(pokemon.height)
-    pokemon500.push(pokemon.moves)
-    //const pokemon500 = pokemon.sprites.back_default;
+    pokemon500.push(pokemon.moves)    
     XsetPokemons(pokemon500);      
-    console.log(Xpokemons)
-    console.log("TEEEEEEEEEEEEEEEEEEEEST")
   }
   XfetchPokemons();        
 },[sida]);
-
-
 
 function PrintaPoks(props){  
   return (
@@ -42,21 +37,14 @@ function PrintaPoks(props){
   )
 }
 
-
 function PrintaInfo(props){ 
-
-//{Xpokemons}  
-//
-
 return <div>   
    <img src={Xpokemons[1].back_default} alt={x}/>
    <p><span className="titel">{x}</span></p>
-   <p>Abilites: {Xpokemons[0].map((p) => <span className="ability">{p.ability.name}<>, </></span>)} </p>
+   <p>Abilites: {Xpokemons[0].map((p) => <span key={p.ability.name} className="ability">{p.ability.name}<>, </></span>)} </p>
    <p>Height: <span className="ability">{Xpokemons[2]}</span> </p>
-   <p>Moves: {Xpokemons[3].map((p) => <span className="ability">{p.move.name}<>, </></span>)} </p>
-
-   <button onClick={e => {setSida(false); props.addUrl(i, Xpokemons[1].back_default)}}> back </button>
-   
+   <p>Moves: {Xpokemons[3].map((p) => <span key={p.move.name} className="ability">{p.move.name}<>, </></span>)} </p>
+   <button onClick={e => {setSida(false); props.addUrl(i, Xpokemons[1].back_default)}}> back </button>   
    </div>   
 }
 

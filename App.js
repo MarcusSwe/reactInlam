@@ -12,13 +12,10 @@ function App() {
       const pokemon = await resp.json()
       const pokemon50 = pokemon.results.slice(0,49)
       pokemon50.forEach(e => {e.bildUrl = '"#"';});
-      setPokemons(pokemon50);      
-      console.log(pokemon50)
+      setPokemons(pokemon50);       
     }
     fetchPokemons();        
   },[]);
-
-  
 
  function removePokemon(x){
    const removed = [...pokemons];
@@ -32,7 +29,6 @@ function App() {
     setPokemons(changed);
   }
 
-
   return (
         <div>
         <PrintaPokemon 
@@ -44,8 +40,6 @@ function App() {
   )
  
 }
-
-
 
 export default App;
 

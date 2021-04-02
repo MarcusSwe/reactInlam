@@ -29,11 +29,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;  
-  
+  cursor: pointer;    
 }
-
-
 
 button:hover {
   background: transparent;
@@ -44,7 +41,6 @@ button:hover {
   font-size: 20px;
 }
 
-.titel {
-  
+.titel {  
   font-size: 50px;
 }
