@@ -26,6 +26,11 @@ function App() {
    setPokemons(removed);
   }
 
+  function addUrl(i, Xpokemons){
+    const changed = [...pokemons];
+    changed[i].bildUrl = Xpokemons;
+    setPokemons(changed);
+  }
 
 
   return (
@@ -33,6 +38,7 @@ function App() {
         <PrintaPokemon 
         poke={pokemons}
         removePokemon = {removePokemon}
+        addUrl = {addUrl}
         />        
       </div>  
   )

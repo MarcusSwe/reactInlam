@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 let x = "";
 let y = 'https://pokeapi.co/api/v2/pokemon/1/';
+let i = 0;
 
 export default function PrintaPokemon(props){
 
@@ -18,7 +19,7 @@ useEffect(() => {
     console.log(Xpokemons)
   }
   XfetchPokemons();        
-},[y]);
+},);
 
 
 
@@ -29,26 +30,29 @@ function PrintaPoks(props){
           <img src={p.bildUrl} alt={p.name}/>
           <p>{p.name}</p>
           <button onClick={e => {props.removePokemon(index)}}>remove</button>
-          <button onClick={e => {setSida(true); x = p.name; y = p.url}}> test </button>
+          <button onClick={e => {setSida(true); x = p.name; y = p.url; i = index}}> test </button>
           </div>)}
     </div>
   )
 }
 
 
-function PrintaInfo(props){
+function PrintaInfo(props){ 
 
- 
+  console.log(i);
+  console.log(Xpokemons);
 
-return <div>
-   
-
+return <div>   
+   <img src={Xpokemons} alt={x}/>
    <p>{x}</p>
    <p>{y}</p>
    {Xpokemons}
-   <button onClick={e => {setSida(false)}}> test </button>   
-   </div>
+   <button onClick={e => {setSida(false); props.addUrl(i, Xpokemons)}}> back </button>
+   
+   </div>   
 }
+
+//<button onClick={e => {setSida(false); props.addUrl(i, Xpokemons)}}> test </button>   
 
 
 function ChooseToPrint(){
