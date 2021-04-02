@@ -2,8 +2,49 @@ div {
   margin: left 150px;
   padding: 10px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
 }
 
 .test {
   display: flex;
+}
+
+.test2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 10px;
+}
+
+button {
+  background: #222;
+  height: 20px;
+  min-width: 45px;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 12px;
+  font-family: 'Cookie', cursive;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;  
+  
+}
+
+
+
+button:hover {
+  background: transparent;
+}
+
+.ability {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+
+.titel {
+  
+  font-size: 50px;
 }
