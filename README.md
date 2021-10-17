@@ -1,0 +1,1 @@
+- React multipage without router plus fetch json
